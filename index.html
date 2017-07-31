@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andra's Portofolio</title>
+    <meta name="Andra's Portofolio Online Portfolio" contentAndra's Portofolio Portfolio" />
+     <link rel="stylesheet" type="text/css" href="css/stylesheet-default.css" />
+    <link href='http://fonts.googleapis.com/css?family=Martel:200' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav role="navigation">
+    <div class="nav-container clearfix">
+
+            <h1><a href="index.html">Andra's Portofolio</a></h1>
+        <h2>Portfolio Website</h2>
+
+        <ul class="menu-items">
+            <li>
+                <a href="/about" class="show-projects">Projects</a>
+            </li>
+            <li>
+                <a href="" class="about-user">About</a>
+            </li>
+        </ul>
+
+        <ul class="media-icons">
+                    <li>
+                        <a href="https://www.facebook.com/andragabr" title="facebook link"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/neculaandra/" title="linkedin link"><i class="fa fa-linkedin"></i></a>
+                    </li>
+        </ul>
+    </div>
+</nav>
+<div class="about-section fade-out remove hidden">
+
+        <div class="about-image-placeholder"></div>
+    <div class="about-details">
+        <h3>
+           Progress is my happiness.
+        </h3>
+        <span style="color: #545454; font-family: arial, sans-serif; font-size: small;"><span style="color: #545454; font-family: arial, sans-serif; font-size: small;"><span style="color: #222222;">For me, progress is crucial for my own peace and happiness.</span><br style="color: #222222;" /><span style="color: #222222;">I am curious and I have that urge to get familiar with many fields as possible.</span><br style="color: #222222;" /><span style="color: #222222;">As a student, I was impassionate about Math, Physics but also about Microbiology and&nbsp;</span>Virusology<span style="color: #222222;">.</span><br style="color: #222222;" /><span style="color: #222222;">I applied to study robotics engineering in 2009 but in 2011 I switched to aerospace engineering where I finished in 2013.</span><br style="color: #222222;" /><span style="color: #222222;">I activated in many fields because I wanted to get to know the area, I have to try it before I committed to one specialization.<br />Let me tell you something:<br /></span>Some people get comfy, they achieve a good salary a job, a house maybe a family and they stop, they get comfortable, they do not grow, they do not take risks, they are pleased. For me, this is professional suicide.<br />And do not get me wrong, is ok to be happy and grateful for what you have, but why to stop? think about all the potential that you have, all the ideas and dreams that came to you and no body else, all your work, all these treasures will be lost forever if you stop.<br />Muscles grow when you apply tension on it when you put bigger and bigger weights, the Brain it's also a muscle, and if we take this and apply in real life: &nbsp;the harder it get's, the cooler you become.<br /><br /></span></span>
+<div style="color: #222222;">I realized that DevOps is a match for me after three months working 9 hours as a part of IT team for a bank and another over 5 hours after work on a project as a devops.</div>
+<div style="color: #222222;">Being able to&nbsp;arrive&nbsp;home at almost&nbsp;8 pm&nbsp;sometimes later, and work with enthusiasm&nbsp;until&nbsp;5 am&nbsp;&nbsp;some days&nbsp;I did not&nbsp;sleep&nbsp;at all, and&nbsp;still&nbsp;having&nbsp;energy&nbsp;and desire to get on that servers, it was the "ringing bell" that convinced me to take a leap, and go 100% for DevOps.</div>
+<span style="color: #545454; font-family: arial, sans-serif; font-size: small;"><br />&nbsp; &nbsp;&nbsp;<br /></span><br /><br />
+    </div>
+
+</div>
+<div class="project-container">
+    <!-- Hidden Project View -->
+    <div class="project-view">
+        <div class="close-window"><i class="fa fa-times"></i></div>
+        <div class="project-contents">
+            <div class="project-view-container">
+                <div class="project-image">
+                    <img src="">
+                </div>
+                <div class="project-details">
+                    <h2></h2>
+                    <div class="project-paragraph"></div>
+                    <div class="project-link">
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Left Navigation -->
+    <ul class="grid effect" id="grid">
+            <li class="item">
+                <a href="#/1">
+                    <img src="images/OpenVPN57.png" alt="OpenVPN57.png" title="OpenVPN57.png">
+                    <div class="show-overlay">
+                        <div class="details">
+                            <h3>test</h3>
+                            View
+                        </div>
+                    </div>
+                </a>
+            </li>
+    </ul>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/main.min.js"></script>
+<script>
+    $(window).load(function() {
+
+
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+            minDuration : 0.4,
+            maxDuration : 0.7,
+            viewportFactor : 0.2
+        } );
+
+
+        var aboutUser = document.querySelector('.about-user');
+        var projects = document.querySelector('.show-projects');
+        var projectItem = document.querySelectorAll('.item a');
+        var projectView = document.querySelector('.project-view');
+        var aboutSection = document.querySelector('.about-section');
+        var gridContainer = document.querySelector('.project-container');
+        var $titleContent = $('h1').text();
+        var $title = $('h1');
+        var $projectData = "";
+
+        var medium = false,
+            large  = false,
+            length;
+
+        if($titleContent.indexOf(' ') != -1) {
+            $titleContent = $titleContent.split(' ');
+            length = $titleContent.length;
+        } else {
+            $titleContent.length = 1;
+            $titleContent = [$titleContent];
+            length = 1;
+        }
+
+
+        for(var i = 0; i < length; i++) {
+            if($titleContent[i].length > 7 && $titleContent[i].length <= 9) {
+                medium = true;
+            } else if($titleContent[i].length > 9) {
+                large = true;
+            }
+        }
+
+        if(medium === true) {
+            $title.addClass('title-medium');
+        }
+
+        if(large === true) {
+            $title.addClass('title-large');
+        }
+
+
+        aboutUser.addEventListener('click', function(e) {
+            e.preventDefault();
+            hideProject();
+            gridContainer.classList.add("slide-right");
+            aboutSection.classList.remove('hidden');
+            setTimeout(function(){
+                aboutSection.classList.remove("fade-out");
+                aboutSection.classList.remove("remove");
+                gridContainer.classList.remove("float-right");
+            }, 500);
+        });
+
+        projects.addEventListener('click', function(e) {
+            e.preventDefault();
+            hideProject();
+            aboutSection.classList.add("fade-out");
+            setTimeout(function(){
+                aboutSection.classList.add("remove");
+                gridContainer.classList.remove("slide-right");
+            }, 500);
+        });
+
+
+        var path = window.location.href;
+        if(path.indexOf("#") >= 0) {
+            getProject();
+        }
+
+
+        addEventListener('hashchange', function () {
+            getProject();
+        });
+
+        function getProject() {
+            var id = getProjectId();
+            if($projectData == "") {
+                $.ajax({
+                    url: 'data/data.json',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data, status) {
+                        if (status === "success") {
+                            $projectData = data;
+                            showProject($projectData, id);
+                        }
+                    }
+                });
+            } else {
+                showProject($projectData, id);
+            }
+        }
+
+        function getProjectId() {
+            var hashPath =  window.location.href;
+            hashPath = hashPath.split('/');
+            var hashLength = hashPath.length - 1;
+            var id = hashPath[hashLength];
+            return id;
+        }
+
+        function showProject(data, id) {
+            var $data = data;
+            jQuery.each($data.project, function(i, val) {
+                if(i == id) {
+                    console.log(val['cover-image']);
+                    $('.project-image img').attr('src', './images/'+val['cover-image']);
+                    $('.project-details h2').html(val.title);
+                    $('.project-paragraph').html(val.description);
+                    $('.project-link a').attr('href', val.link);
+                    $('.project-link a').html(val.link);
+                }
+            });
+
+            var height = window.innerHeight;
+            $('.project-contents').css('height', height);
+            $('.project-contents .project-image').imgLiquid();
+            if($(window).width() < 1025) {
+                $("html, body").animate({ scrollTop: 200 }, "slow");
+            } else {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            }
+            $('.project-view').addClass('project-show');
+        }
+
+        function hideProject() {
+            window.history.pushState('', '', 'index.html');
+            $('.project-container').css('position', 'relative');
+            $('.project-view').removeClass('project-show');
+        }
+
+        $('.close-window').on('click', hideProject);
+
+        $( window ).resize(function() {
+            if($(window).width() < 1025) {
+                $('.project-container').css('position', 'relative');
+            }
+        });
+
+    });
+
+
+</script>
+</body>
+</html>
